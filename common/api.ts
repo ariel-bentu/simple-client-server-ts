@@ -1,5 +1,5 @@
 export type ServerAPI = {
-    echo (arg: string):string;
-    upper(arg: string):string;
+    echo (arg: string):PromiseLike<string>;
+    upper(arg: string):PromiseLike<string>;
     //newfunc(arg:string):string;
 }

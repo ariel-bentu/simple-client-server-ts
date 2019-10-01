@@ -2,10 +2,10 @@ import { ServerAPI } from '../common/api';
 
 export const Server: ServerAPI = {
     upper: (arg: string) => {
-        return arg.toUpperCase();
+        return Promise.resolve(arg.toUpperCase());
     },
 
     echo: (arg: string) => {
-        return arg;
+        return Promise.resolve(arg);
     }
 }

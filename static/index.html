@@ -3,20 +3,17 @@
 <script src="http://localhost:3000/fos"></script>
 
 <script type="module">
-    import { clientOnlyFunction } from './js/client/index.js';
+    import { bind } from './js/client/index.js';
 
     window.runIt = () => {
-        clientOnlyFunction("Ariel").then(result => 
-        {
-            let theDiv = document.getElementById("theDiv");
-            theDiv.innerHTML = result;
-            //alert(result);
-        });
+        bind();
     }
 </script>
 
 </head>
 <body onload="runIt()"> 
-    <div id="theDiv"></div>
+    <div id="theDiv">
+        <input id='theText' type='text' />
+    </div>
 </body>
 </html>
